@@ -1,4 +1,4 @@
-name: hexlet-check
+name: lint
 
 on:
   push:
@@ -11,5 +11,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+
       - name: linter
         run: make lint
