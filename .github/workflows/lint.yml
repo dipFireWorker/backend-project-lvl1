@@ -1,15 +1,19 @@
 name: lint
 
 on:
-  push:
-    branches:
-      - '**'
-    tags:
-      - '**'
+  - push
+  - pull_request
 
 jobs:
   build:
+
     runs-on: ubuntu-latest
+
+    strategy:
+      # Node versions list
+      matrix:
+        node-version: [14.x]
+
     steps:
       # - uses: actions/checkout@v2
       # - name: linter
@@ -21,6 +25,8 @@ jobs:
       #   with:
       #     node-version: ${{ matrix.node-version }}
       # - run: make lint
-      - name: linter
+      
+      - name: Run linter
+        # Run Linter
         run: |
-          npx eslint .
+          make lint
