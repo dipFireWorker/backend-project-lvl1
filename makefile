@@ -2,7 +2,7 @@ install:
 	npm ci
 
 brain-games:
-	node bin/brain-games.js
+	node --experimental-modules --es-module-specifier-resolution=node bin/brain-games.js
 
 publish:
 	npm publish --dry-run
