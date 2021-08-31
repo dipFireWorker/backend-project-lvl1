@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /* eslint-disable no-console */
 
 import readlineSync from 'readline-sync';
@@ -6,7 +7,7 @@ const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min)) + min
 
 const isEven = (number) => (number % 2 === 0 ? 'yes' : 'no');
 
-export default (name) => {
+const brainEven = (name) => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
   for (let i = 0; i < 3; i += 1) {
@@ -28,4 +29,6 @@ export default (name) => {
   }
 };
 
-// import { brainEven };
+brainEven();
+
+export default brainEven;
