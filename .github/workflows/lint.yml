@@ -11,5 +11,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: linter
+        uses: hexlet/project-action@release
       - run: make lint
