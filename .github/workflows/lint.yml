@@ -15,9 +15,12 @@ jobs:
       # - name: linter
       #   uses: hexlet/project-action@release
       # - run: make lint
-      - uses: actions/checkout@v2
+      # - uses: actions/checkout@v2
+      # - name: linter
+      #   uses: actions/setup-node@v2
+      #   with:
+      #     node-version: ${{ matrix.node-version }}
+      # - run: make lint
       - name: linter
-        uses: actions/setup-node@v2
-        with:
-          node-version: ${{ matrix.node-version }}
-      - run: make lint
+        run: |
+          make lint
