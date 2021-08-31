@@ -12,4 +12,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: linter
+      uses: hexlet/project-action@release
       - run: make lint
