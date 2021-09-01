@@ -16,6 +16,9 @@ brain-gcd:
 brain-progression:
 	node --experimental-modules --es-module-specifier-resolution=node bin/brain-progression.js
 
+brain-prime:
+	node --experimental-modules --es-module-specifier-resolution=node bin/brain-prime.js
+
 publish:
 	npm publish --dry-run
 
