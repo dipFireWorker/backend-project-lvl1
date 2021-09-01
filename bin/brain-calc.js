@@ -2,4 +2,4 @@
 
 import startGame from '../src/index';
 
-startGame('games');
+startGame('calc');
