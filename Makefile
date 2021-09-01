@@ -10,6 +10,9 @@ brain-even:
 brain-calc:
 	node --experimental-modules --es-module-specifier-resolution=node bin/brain-calc.js
 
+brain-gcd:
+	node --experimental-modules --es-module-specifier-resolution=node bin/brain-gcd.js
+
 publish:
 	npm publish --dry-run
 
