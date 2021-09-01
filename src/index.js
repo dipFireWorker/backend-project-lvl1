@@ -66,12 +66,21 @@ const calc = () => {
   const question = [];
   const answer = [];
 
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+  console.log('What is the result of the expression?');
 
   for (let i = 0; i < ROUND_COUNT; i += 1) {
-    const number = getRandomInt(1, 100);
-    question.push(number);
-    answer.push(number % 2 === 0 ? 'yes' : 'no');
+    const number1 = getRandomInt(1, 100);
+    const number2 = getRandomInt(1, 100);
+    const sign = ['+', '-', '*'][getRandomInt(0, 3)];
+    question.push(`${number1} ${sign} ${number2}`);
+
+    if (sign === '+') {
+      answer.push(`${number1 + number2}`);
+    } else if (sign === '-') {
+      answer.push(`${number1 - number2}`);
+    } else {
+      answer.push(`${number1 * number2}`);
+    }
   }
 
   return [question, answer];
