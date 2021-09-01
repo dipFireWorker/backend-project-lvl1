@@ -1,8 +1,9 @@
+/* eslint-disable import/extensions */
 /* eslint-disable no-use-before-define */
 /* eslint-disable no-console */
 
 import readlineSync from 'readline-sync';
-import greeting from './cli';
+import greeting from './cli.js';
 
 const ROUND_COUNT = 3;
 
