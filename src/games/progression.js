@@ -12,7 +12,7 @@ const progression = () => {
     const start = getRandomInt(1, 20);
     const step = getRandomInt(1, 15);
     const lengthProgression = getRandomInt(5, 11);
-    const missedIndex = getRandomInt(0, lengthProgression + 1);
+    const missedIndex = getRandomInt(1, lengthProgression);
 
     const questionArray = [];
     for (let ix = 0; ix < lengthProgression; ix += 1) {
