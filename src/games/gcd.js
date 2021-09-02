@@ -2,6 +2,16 @@
 /* eslint-disable import/extensions */
 import { getRandomInt, ROUND_COUNT } from '../cli.js';
 
+const getGcd = (number1, number2) => {
+  if (number2 > number1) {
+    return getGcd(number2, number1);
+  }
+  if (!number2) {
+    return number1;
+  }
+  return getGcd(number2, number1 % number2);
+};
+
 const gcd = () => {
   const question = [];
   const answer = [];
@@ -16,16 +26,6 @@ const gcd = () => {
   }
 
   return [question, answer];
-};
-
-const getGcd = (number1, number2) => {
-  if (number2 > number1) {
-    return getGcd(number2, number1);
-  }
-  if (!number2) {
-    return number1;
-  }
-  return getGcd(number2, number1 % number2);
 };
 
 export default gcd;
