@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable import/extensions */
 import { getRandomInt, ROUND_COUNT } from '../cli.js';
 
