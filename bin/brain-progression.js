@@ -3,4 +3,4 @@
 
 import startGame from '../src/index.js';
 
-startGame('progression');
+startGame('prime');
